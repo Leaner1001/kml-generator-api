@@ -1,0 +1,91 @@
+/* user.wxss */
+.user-section {
+  display: flex;
+  align-items: center;
+  padding: 40rpx;
+  background-color: #f0f9ff;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.user-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30rpx;
+  background-color: #fff;
+}
+
+.user-avatar image {
+  width: 100%;
+  height: 100%;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.user-phone {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.menu-section {
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:active {
+  background-color: #f9f9f9;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.menu-text {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.menu-arrow {
+  font-size: 32rpx;
+  color: #999;
+}
+
+.logout-btn {
+  margin-top: 40rpx;
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.version-info {
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 60rpx;
+}
