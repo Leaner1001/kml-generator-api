@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="login-form">
+    <view class="title">图层生成工具</view>
+    <view class="subtitle">请登录后使用</view>
+    
+    <view class="form-item">
+      <view class="form-label">手机号</view>
+      <view class="input-with-suffix">
+        <input 
+          class="form-input" 
+          placeholder="请输入手机号" 
+          placeholder-class="placeholder" 
+          value="{{phone}}" 
+          bindinput="bindPhoneInput"
+          type="number"
+        />
+      </view>
+      <view class="error" wx:if="{{errors.phone}}">{{errors.phone}}</view>
+    </view>
+    
+    <view class="form-item">
+      <view class="form-label">验证码</view>
+      <view class="input-with-suffix">
+        <input 
+          class="form-input code-input" 
+          placeholder="请输入验证码" 
+          placeholder-class="placeholder" 
+          value="{{code}}" 
+          bindinput="bindCodeInput"
+          type="number"
+        />
+        <button 
+          class="code-btn" 
+          bindtap="sendCode" 
+          disabled="{{countdown > 0}}"
+        >
+          {{countdown > 0 ? countdown + 's' : '获取验证码'}}
+        </button>
+      </view>
+      <view class="error" wx:if="{{errors.code}}">{{errors.code}}</view>
+    </view>
+    
+    <button 
+      class="btn btn-primary" 
+      bindtap="login" 
+      loading="{{loading}}"
+      disabled="{{loading}}"
+    >
+      登录
+    </button>
+    
+    <view class="tip">
+      提示：测试环境下，验证码可直接使用 "123456"
+    </view>
+  </view>
+</view>
